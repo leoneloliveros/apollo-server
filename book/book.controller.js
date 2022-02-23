@@ -8,14 +8,14 @@ async function addBookHandler(parent, args, context) {
 }
 
 async function getAllBooksHandler(parent, args, context) {
-  const { currentUser } = context
-  if (!currentUser) {
-    throw new Error('user must logged in')
-  }
+  // const { currentUser } = context
+  // if (!currentUser) {
+  //   throw new Error('user must logged in')
+  // }
 
-  if ( currentUser.email !== 'loliveros@gmail.com') {
-    throw new Error('El usuario no es Leonel')
-  }
+  // if ( currentUser.email !== 'loliveros@gmail.com') {
+  //   throw new Error('El usuario no es Leonel')
+  // }
 
   //funcion
 

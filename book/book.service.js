@@ -1,11 +1,12 @@
-const Book = require('./book.model');
+const { Book } = require('../models');
 
 function addNewBook(book) {
+  console.log('create book')
   return Book.create(book);
 }
 
 function getAllBooks() {
-  return Book.find();
+  return Book.findAll();
 }
 
 function getSingleBook(title) {

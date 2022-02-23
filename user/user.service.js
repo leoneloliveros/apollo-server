@@ -1,4 +1,4 @@
-const User = require('./user.model');
+const { User } = require('../models')
 const { signToken, comparePassword } = require('../auth/auth.service');
 
 function createAccount(user) {
@@ -6,7 +6,7 @@ function createAccount(user) {
 }
 
 async function logInUser(email, password) {
-  const user = await User.findOne({ email });
+  const user = await User.find({ email });
   if (!user) {
     throw new Error('User or password incorrect');
   }
@@ -23,7 +23,7 @@ async function logInUser(email, password) {
 }
 
 function getUserById(id) {
-  return User.findById(id);
+  return User.findByPK(id);
 }
 
 module.exports = {

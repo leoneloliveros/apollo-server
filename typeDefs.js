@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-express')
 const typeDefs = gql`
   "Este tipo 'Book' refiere a los campos del libro"
   type Book {
-    _id: ID!
+    id: ID!
     title: String!
     "Este es el autor del libro"
     author: String!
@@ -11,7 +11,7 @@ const typeDefs = gql`
   }
 
   type User {
-    _id: ID!
+    id: ID!
     email: String!
     username: String!
     password: String!
